@@ -1,0 +1,65 @@
+{
+  "env": {
+    "es6": true,
+    "node": true,
+    "es2021": true,
+    "commonjs": true,
+    "browser": false
+  },
+  "plugins": [
+//    "@babel",
+    "@typescript-eslint/eslint-plugin"
+  ],
+  "extends": [
+    "airbnb-base",
+    "eslint:recommended",
+    "plugin:import/typescript",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "requireConfigFile": false
+  },
+  "rules": {
+    "@typescript-eslint/no-var-requires": 0,
+    "linebreak-style": 0,
+    "arrow-parens": [
+      "error",
+      "as-needed"
+    ],
+    "eqeqeq": 1,
+    "max-len": [
+      "error",
+      {
+        "ignoreComments": true,
+        "code": 150
+      }
+    ],
+    "no-await-in-loop": 1,
+    "no-console": 2,
+    "no-plusplus": 0,
+    "lines-between-class-members": 0,
+    "import/no-unresolved": 0,
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/no-explicit-any": "off", // todo remove
+    "import/prefer-default-export": "off",
+    "class-methods-use-this": "warn"
+  }
+}
